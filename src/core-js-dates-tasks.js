@@ -158,17 +158,10 @@ function isDateInPeriod(date, period) {
  */
 function formatDate(date) {
   const options = {
-    year: 'numeric',
-    month: 'numeric',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric',
-    hour12: true,
     timeZone: 'UTC',
   };
 
-  const formattedDate = new Date(date).toLocaleTimeString('en-US', options);
+  const formattedDate = new Date(date).toLocaleString('en-US', options);
   return formattedDate;
 }
 
