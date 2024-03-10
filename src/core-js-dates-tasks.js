@@ -234,12 +234,14 @@ function getNextFridayThe13th(date) {
   const oneDayInMilliseconds = 24 * 60 * 60 * 1000;
   const friday = 5;
   let currentDate = new Date(date.getTime() + oneDayInMilliseconds);
-  while (true) {
+  const flag = true;
+  while (flag) {
     if (currentDate.getDay() === friday && currentDate.getDate() === 13) {
       return currentDate;
     }
     currentDate = new Date(currentDate.getTime() + oneDayInMilliseconds);
   }
+  return null;
 }
 
 /**
